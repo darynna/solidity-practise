@@ -6,7 +6,7 @@ pragma solidity ^0.8.0;
 //   address public myAddr = 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2; //storage
 //   string public myStr = "test"; //storage
 
-//   function receiveFunds() public payable {
+//    function receiveFunds() public payable {
 //     payments[msg.sender] = msg.value;
 //   }
 
