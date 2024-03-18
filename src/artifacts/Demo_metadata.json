@@ -8,29 +8,16 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "newValueStr",
-						"type": "string"
-					}
-				],
-				"name": "demo",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "address",
-						"name": "targetAddr",
+						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "getBalance",
+				"name": "balances",
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "totalPayments",
 						"type": "uint256"
 					}
 				],
@@ -38,73 +25,62 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "myAddr",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "myStr",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "payments",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "receiveFunds",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "targetAddr",
+						"name": "_addr",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "_index",
 						"type": "uint256"
 					}
 				],
-				"name": "transferTo",
+				"name": "getPayment",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "from",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "message",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Demo.Payment",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "pay",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -136,11 +112,11 @@
 	},
 	"sources": {
 		"src/Practise.sol": {
-			"keccak256": "0xf545deee61255c2556d285bafc5808c42b20b0ab1cb96872696a2047c7c36b3b",
+			"keccak256": "0xf0b1f309e1748438e19a30464e20e51dc159b2d8b5cc8b042592864f325d5613",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://baaff8afb30038a49ce1482c378cfd3d9836437b975317526550e7859b634430",
-				"dweb:/ipfs/QmZYTJc5KPAPjg4nXm2VhkJxnQ7QrMqvtFCYPoSURP3MZk"
+				"bzz-raw://f646cf3a21fb04423d9b1c54d894622e3076ad12c9086b1b4148f58fa708fec3",
+				"dweb:/ipfs/QmaP5pbaHSR6eXZTZrYXttvgdMVXQje61ZT3i1iyJY7coW"
 			]
 		}
 	},
