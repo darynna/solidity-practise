@@ -10,11 +10,12 @@ describe("Payments", function () {
     [acc1, acc2] = await ethers.getSigners()
     const Payments = await ethers.getContractFactory("Payments", acc1)
     payments = await Payments.deploy()
-    await payments.deployed()
+    await payments.waitForDeployment()
+    console.log(payments)
   })
 
   it("should be deployed", async function() {
-    expect(payments.address).to.be.properAddress
+    expect(payments.target).to.be.properAddress
   })
     
    it("should have 0 ether by default", async function() {

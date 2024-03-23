@@ -16,7 +16,7 @@ contract Payments {
     }
     mapping(address => Balance) public balances;
 
-    function currectBalance() public view returns (uint) {
+    function currentBalance() public view returns (uint) {
         return address(this).balance;
     }
 
