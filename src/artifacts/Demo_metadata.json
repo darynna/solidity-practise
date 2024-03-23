@@ -1,86 +1,58 @@
 {
 	"compiler": {
-		"version": "0.8.25+commit.b61c2a91"
+		"version": "0.8.24+commit.e11b9ed9"
 	},
 	"language": "Solidity",
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balances",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "totalPayments",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
 			},
 			{
+				"anonymous": false,
 				"inputs": [
 					{
+						"indexed": false,
 						"internalType": "address",
-						"name": "_addr",
+						"name": "_from",
 						"type": "address"
 					},
 					{
+						"indexed": false,
 						"internalType": "uint256",
-						"name": "_index",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_timestamp",
 						"type": "uint256"
 					}
 				],
-				"name": "getPayment",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "amount",
-								"type": "uint256"
-							},
-							{
-								"internalType": "uint256",
-								"name": "timestamp",
-								"type": "uint256"
-							},
-							{
-								"internalType": "address",
-								"name": "from",
-								"type": "address"
-							},
-							{
-								"internalType": "string",
-								"name": "message",
-								"type": "string"
-							}
-						],
-						"internalType": "struct Demo.Payment",
-						"name": "",
-						"type": "tuple"
-					}
-				],
-				"stateMutability": "view",
+				"name": "Paid",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "pay",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "message",
-						"type": "string"
+						"internalType": "address payable",
+						"name": "_to",
+						"type": "address"
 					}
 				],
-				"name": "pay",
+				"name": "withdraw",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -97,9 +69,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"src/Practise.sol": "Demo"
+			"src/Demo.sol": "Demo"
 		},
-		"evmVersion": "cancun",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -111,12 +83,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"src/Practise.sol": {
-			"keccak256": "0xf0b1f309e1748438e19a30464e20e51dc159b2d8b5cc8b042592864f325d5613",
+		"src/Demo.sol": {
+			"keccak256": "0xf910fcce395100be03c502629156b4b3a8a108fd71d7ad1ae36892b33dc0f695",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f646cf3a21fb04423d9b1c54d894622e3076ad12c9086b1b4148f58fa708fec3",
-				"dweb:/ipfs/QmaP5pbaHSR6eXZTZrYXttvgdMVXQje61ZT3i1iyJY7coW"
+				"bzz-raw://8399aba711e582b378ea274e2bf1a396399196cc6d32726d77cf72bbe4aeff58",
+				"dweb:/ipfs/QmdgzH2LPuf3aaqbaZabNRgmRbVKeDZqftD8pGFbfwJ3Fa"
 			]
 		}
 	},
